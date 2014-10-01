@@ -23,16 +23,16 @@ get-orig-source:
 	fi
 	rm -rf get-orig-source ../$(TARBALL)
 	mkdir get-orig-source
-	cd get-orig-source;git clone $(BRANCH) git@github.com:Juniper/contrail-webui-third-party
+	cd get-orig-source;git clone $(BRANCH) https://github.com/Juniper/contrail-webui-third-party
 	if [ "$(TAGS)x" != "x" ] ; then \
 	    cd get-orig-source/contrail-webui-third-party;git checkout $(TAGS); \
 	fi
 	cd get-orig-source/contrail-webui-third-party;python ./fetch_packages.py
-	cd get-orig-source;git clone $(BRANCH) git@github.com:Juniper/contrail-web-core.git;
+	cd get-orig-source;git clone $(BRANCH) https://github.com/Juniper/contrail-web-core.git;
 	if [ "$(TAGS)x" != "x" ] ; then \
 	    cd get-orig-source/contrail-web-core;git checkout $(TAGS); \
 	fi
-	cd get-orig-source;git clone $(BRANCH) git@github.com:Juniper/contrail-web-controller.git;
+	cd get-orig-source;git clone $(BRANCH) https://github.com/Juniper/contrail-web-controller.git;
 	if [ "$(TAGS)x" != "x" ] ; then \
 	    cd get-orig-source/contrail-web-controller;git checkout $(TAGS); \
 	fi
