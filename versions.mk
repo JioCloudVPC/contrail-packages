@@ -21,8 +21,8 @@ NEUTRON_COMMIT_NUMBER := $(shell cd openstack/neutron_plugin; git rev-list --abb
 NEUTRON_REF := $(shell (cd openstack/neutron_plugin; git log --oneline -1) | awk '/[0-9a-f]+/ { print $$1; }')
 WEBUI_COMMIT_NUMBER := $(shell cd contrail-web-core; git rev-list --abbrev-commit HEAD | wc -l)
 WEBUI_REF := $(shell (cd contrail-web-core; git log --oneline -1) | awk '/[0-9a-f]+/ { print $$1; }')
-CONTRAIL_VERSION = 1.20+$(CONTROLLER_COMMIT_NUMBER)+$(CONTROLLER_REF)
-NEUTRON_VERSION = 1.20+$(NEUTRON_COMMIT_NUMBER)+$(NEUTRON_REF)
-WEBUI_VERSION = 1.20+$(WEBUI_COMMIT_NUMBER)+$(WEBUI_REF)
+CONTRAIL_VERSION = 1.21+$(CONTROLLER_COMMIT_NUMBER)+$(CONTROLLER_REF)
+NEUTRON_VERSION = 1.21+$(NEUTRON_COMMIT_NUMBER)+$(NEUTRON_REF)
+WEBUI_VERSION = 1.21+$(WEBUI_COMMIT_NUMBER)+$(WEBUI_REF)
 
 endif
